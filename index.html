@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>A Seu Gosto - Delivery</title>
+  <link rel="stylesheet" type="text/css" href="estilos/estilo.css">
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
+  <script type="text/javascript">
+  
+function valida(){
+  if(document.getElementById("valorPeso").value == "" || document.getElementById("valorAltura").value == "" || document.getElementById("valorIdade").value == ""){
+    alert("Valor não informador");
+    return false;
+  }else{
+  
+    if(validanumero()){
+    return true;
+  
+    }else{
+    return false;
+    }
+  }
+ 
+}
+ function validanumero(){
+ var valorPeso = document.getElementById("valorPeso").value;
+ var valorAltura = document.getElementById("valorAltura").value;
+ var valorIdade = document.getElementById("valorIdade").value;
+
+  if(isNaN(valorPeso)){
+    alert("Valor dp Peso não numerico");
+    return false;
+  }
+  if(isNaN(valorAltura)){
+    alert("Valor da Altura não numerico");
+    return false;
+  }
+  if(isNaN(valorIdade)){
+    alert("Valor da Idade não é númerico")
+  }
+  else{
+  return true;
+  }
+ 
+}
+ 
+function soma(){
+ var valorPeso = document.getElementById("valorPeso").value;
+ var valorAltura = document.getElementById("valorAltura").value;
+ var valorIdade = document.getElementById("valorIdade").value;
+ var SexoM = document.getElementById('Sexo').value;
+ var SexoF = document.getElementById('Sexo').value;
+
+   if(SexoM == 'H'){
+     var resultado = 66 + (13.7 * parseInt(valorPeso)) + (5.0 * parseInt(valorAltura)) - (6.8 * parseInt(valorIdade));
+     document.getElementById("resultado").value = resultado;
+     document.getElementById("subresu").value = resultado;
+    }
+    else if (SexoF == 'M') {
+     var resultado = 665 + (9.6 * parseInt(valorPeso)) + (1.8 * parseInt(valorAltura)) - (4.7 * parseInt(valorIdade));
+     document.getElementById("resultado").value = resultado;
+     document.getElementById("subresu").value = resultado;
+    }
+    else{
+      alert("Sexo não selecionado!!!");
+    }
+ 
+}
+
+function calcIMC() {
+  var valorPeso = document.getElementById("valorPeso").value;
+  var valorAltura = document.getElementById("valorAltura").value;
+
+  var IMC = valorPeso / ((valorAltura / 100) * (valorAltura/100));
+  var IMCarr = parseFloat(IMC.toFixed(4));
+  document.getElementById('resultadoIMC').value = IMCarr;
+
+}
+
+function mostrarCardapio (id){
+
+  if (document.getElementById(id).style.display == 'none'){
+    document.getElementById(id).style.display = 'block';
+  }
+  else{
+    document.getElementById(id).style.display = 'none';
+  }
+}
+function mostraresul (id){
+
+  if (document.getElementById(id).style.display == 'none'){
+      if(document.getElementById("resultado").value != 0){
+    document.getElementById(id).style.display = 'block';
+      }
+  }
+  else{
+    document.getElementById(id).style.display = 'none';
+  }
+}
+
+function ocultar(id) {
+  document.getElementById(id).style.display = 'none';
+}
+
+</script>
+</head>
+<body>
+    <a class="whatsapp-link" href="https://web.whatsapp.com/send?phone=5511999191919" target="_blank">
+      <i class="fa fa-whatsapp"></i>
+    </a>
+
+    <a class="instagram-link" href="https://www.instagram.com/aseugosto_oficial" target="_blank">
+      <i class="fa fa-instagram"></i>
+    </a>
+
+    <!--<figure class="logotipo">
+      <img src="C:/Users/Jonatas Santos/Documents/AseuGosto/imagens/insta avatar_rv01.jpg">
+    </figure>-->
+  <!--<input type="checkbox" id="bt_menu" />
+  <label for="bt_menu">&#9776;</label>-->
+<nav class="menu">
+
+      <ul>
+          <!--<li><a href="#">Home</a></li>-->
+          <li><a href="#sobrenos">Sobre</a>
+              
+          </li>
+          <li><a href="#">Cardápio</a>
+              <ul>
+                  <li><a href="#ComidasFit">Comidas Fit</a></li>
+                  <!--<li><a href="#ComidasVega">Comidas Vegana</a></li>-->
+                  <li><a href="#ComidasDive">Comidas Diversas</a></li>
+                  <!--<li><a href="#SucosDetox">Suco Detox</a></li>-->
+                  <li><a href="#SucosNaturais">Sucos Naturais</a></li>
+              </ul>
+          </li>
+          <!--<li><a href="#">Contato</a></li>-->
+      </ul>
+
+      <div id="caixamsg">
+        <form id="formulariocli" action="#" method="POST">
+          <fieldset>
+          <p class="textmsg">Veja o nosso cardápio, caso nenhuma das opções abaixo seja do seu gosto,
+          mande para nós o que deseja comer, ou o que deseja ver no nosso cardápio ou mande-nos suas sugestões.
+          Assim podemos preparar um cardápio do seu jeito e gosto. Fale com a gente no whatsApp ou Instagram 
+          , estamos ansiosos para atender você!.</p><br>
+
+          <!--<input type="text" name="nomecliente" id="nomecliente" placeholder="Nome Completo" /><br>
+
+          <input type="text" name="contatocliente" id="contatocliente" placeholder="(xx) xxxxx-xxxx" /><br>
+
+          <input type="text" name="emailcliente" id="emailcliente" placeholder="Email@Email" /><br>
+          <textarea name="text" id="caixatext" cols="20" rows="10"></textarea>
+
+          </fieldset>
+
+          <input type="button" value="Enviar" id="botaoOpcao" >-->
+        </form>
+      </div>
+
+
+  <div class="listaop">
+    <input class="modCar1" id="ComidasFit" type="button" value="Comidas Fit" onclick="mostrarCardapio('cf')" />
+      <div id="cf" class="hidden">
+      <ul class="subcf">
+            <li><a href="#">Frango Desfiado, Panque de Batata e <br>Brócolis Gratinado (Acompanha arroz Normal ou Integral).......................<strong>R$ 12,00</strong></a></li>
+            <li><a href="#">Patinho Moído, Purê de Mandioquinha,<br>Couve Manteiga
+              (Acompanhá Arroz Normal ou Integral).......................<strong>R$ 12,00</strong></a></li>
+            <li><a href="#">Purê de Batata Doce e Frango Desfiado.......................<strong>R$ 12,00</strong></a></li>
+            <li><a href="#">Caldo de Mandioquinha.............<strong>R$ 12,00</strong></a></li>
+            <li><a href="#">Caldo Verde.......................<strong>R$ 12,00</strong></a></li>
+            <li><a href="#">Macarrão de Abobrinha...............<strong>R$ 12,00</strong></a></li>
+            <li><a href="#">Batata doce e Frango..................<strong>R$ 12,00</strong></a></li>
+            <li><a href="#">Escondidinho de Carne...............<strong>R$ 12,00</strong></a></li>
+            <li><a href="#">Escondidinho de Frango..............<strong>R$ 12,00</strong></a></li>
+            <li><a href="#">Escondidinho de Carne Seca........<strong>R$ 12,00</strong></a></li>
+            <li><a href="#">Fricassê.......................<strong>R$ 12,00</strong></a></li>
+          </ul>
+      </div>
+    
+
+      <!--<input class="modCar2" id="ComidasVega" type="button" value="Comida Vegana" onclick="mostrarCardapio('cv')" />
+      <div id="cv" class="hidden">
+      <ul class="subcv">
+            <li><a href="#">Purê de Batata Doce e Frango Desfiado.......................<strong>R$ 12,00</strong></a></li>
+            <li><a href="#">Purê de Batata Doce e Frango Desfiado.......................<strong>R$ 12,00</strong></a></li>
+            <li><a href="#">Purê de Batata Doce e Frango Desfiado.......................<strong>R$ 12,00</strong></a></li>
+            <li><a href="#">Purê de Batata Doce e Frango Desfiado.......................<strong>R$ 12,00</strong></a></li>
+            <li><a href="#">Purê de Batata Doce e Frango Desfiado.......................<strong>R$ 12,00</strong></a></li>
+          </ul>
+      </div>-->
+
+      <input class="modCar3" id="ComidasDive" type="button" value="Comidas Diversas" onclick="mostrarCardapio('cd')" />
+      <div id="cd" class="hidden">
+      <ul class="subcd">
+            <li><a href="#">Strogonoff de Frango com Arroz e Batata.......................<strong>R$ 12,00</strong></a></li>
+            <li><a href="#">Strogonoff de Carne com Arroz e Batata.......................<strong>R$ 12,00</strong></a></li>
+            <li><a href="#">Filé de Frango com Arroz e Feijão<br>(Arroz com Milho e Ervilha opcional).......................<strong>R$ 12,00</strong></a></li>
+            <li><a href="#">Macarrão à Bolonhesa.......................<strong>R$ 12,00</strong></a></li>
+            <li><a href="#">Lasanha a bolonhesa.......................<strong>R$ 12,00</strong></a></li>
+          </ul>
+      </div>
+
+      <input class="modCar4" id="SucosNaturais" type="button" value="Sucos Naturais" onclick="mostrarCardapio('sn')" />
+      <div id="sn" class="hidden">
+      <ul class="subsna">
+            <li><a href="#">Laranja 300 ml (leite ou água).......................<strong>R$ 4,50</strong></a></li>
+            <li><a href="#">Laranja c/ Cenoura 300 ml (leite ou água).......................<strong>R$ 4,50</strong></a></li>
+            <li><a href="#">Maracujá 300 ml (leite ou água).......................<strong>R$ 4,50</strong></a></li>
+            <li><a href="#">Abacaxi 300 ml (leite ou água).......................<strong>R$ 4,50</strong></a></li>
+            <li><a href="#">Morango 300 ml (leite ou água).......................<strong>R$ 4,50</strong></a></li>
+            <li><a href="#">Limão 300 ml (leite ou água)..............<strong>R$ 4,50</strong></a></li>
+            <li><a href="#">Manga 300 ml (leite ou água).............<strong>R$ 4,50</strong></a></li>
+          </ul>
+      </div>
+
+      <!--<input class="modCar5" id="ComidasDive" type="button" value="Sucos Detox" onclick="mostrarCardapio('sd')" />
+      <div id="sd" class="hidden">
+      <ul class="subsde">
+            <li><a href="#">Purê de Batata Doce e Frango Desfiado.......................<strong>R$ 12,00</strong></a></li>
+            <li><a href="#">Purê de Batata Doce e Frango Desfiado.......................<strong>R$ 12,00</strong></a></li>
+            <li><a href="#">Purê de Batata Doce e Frango Desfiado.......................<strong>R$ 12,00</strong></a></li>
+            <li><a href="#">Purê de Batata Doce e Frango Desfiado.......................<strong>R$ 12,00</strong></a></li>
+            <li><a href="#">Purê de Batata Doce e Frango Desfiado.......................<strong>R$ 12,00</strong></a></li>
+          </ul>
+      </div>-->
+
+      <!--<input class="modCar4" id="SucosNaturais" type="button" value="Sucos Naturais" onclick="mostrarCardapio('sn')" />
+      <div id="sn" class="hidden">
+      <ul class="subsn">
+            <li><a href="#">Purê de Batata Doce e Frango Desfiado.......................<strong>R$ 12,00</strong></a></li>
+            <li><a href="#">Purê de Batata Doce e Frango Desfiado.......................<strong>R$ 12,00</strong></a></li>
+            <li><a href="#">Purê de Batata Doce e Frango Desfiado.......................<strong>R$ 12,00</strong></a></li>
+            <li><a href="#">Purê de Batata Doce e Frango Desfiado.......................<strong>R$ 12,00</strong></a></li>
+            <li><a href="#">Purê de Batata Doce e Frango Desfiado.......................<strong>R$ 12,00</strong></a></li>
+          </ul>
+      </div>-->
+
+      <!--<input class="modCar5" id="SucosDetox" type="button" value="Sucos Detox" onclick="mostrarCardapio('sd')" />
+      <div id="sd" class="hidden">
+      <ul class="subsd">
+            <li><a href="#">Purê de Batata Doce e Frango Desfiado.......................<strong>R$ 12,00</strong></a></li>
+            <li><a href="#">Purê de Batata Doce e Frango Desfiado.......................<strong>R$ 12,00</strong></a></li>
+            <li><a href="#">Purê de Batata Doce e Frango Desfiado.......................<strong>R$ 12,00</strong></a></li>
+            <li><a href="#">Purê de Batata Doce e Frango Desfiado.......................<strong>R$ 12,00</strong></a></li>
+            <li><a href="#">Purê de Batata Doce e Frango Desfiado.......................<strong>R$ 12,00</strong></a></li>
+          </ul>
+      </div>
+  </div>-->
+
+  <!--<div class="cabecario">
+    <h1 class="cabecario-1">A seu</h1><img src="imagens\logochapeu-removebg-preview.png"><h1 class="cabecario-2">Gosto</h1>
+  </div>-->
+  
+  <div class="subtitulo">
+    <h3>Calcule a sua Taxa Metabólica Basal e <br>seu índice de massa corporal,
+    antes de montar sua dieta!</h3><br>
+    <!--<p>Não estamos aqui só para te fazer perder alguns quilinhos,<br>
+    também estamos aqui para te fazer manter ou ganhar. <br>De uma coisa sabemos,
+    estamos aqui para te ajudar<br>a Transformar Seu Hábito Alimentar!!!</p>-->
+  </div>
+  <div class="caixapedido" id="calcCal">
+    <form id="form">
+      <div class="SexoDiv"> 
+      <select id="Sexo" class="SexoC" name="Sexo">
+        <option value="H">Homem</option>
+        <option value="M">Mulher</option>       
+      </select>
+      <!--<div class="AtFisica">
+      <select id="AtiFisica" name="AtiFisica">
+        <option value="MT">Muito Leve</option>
+        <option value="L">Leve</option>
+        <option value="M">Média</option>
+        <option value="I">Intensa</option>
+        <option value="MI">Muito Intensa</option>
+      </select>
+      </div>-->
+
+     <input id="valorPeso" type="text" size="10" placeholder="Peso(kg)" /><br>
+     <input id="valorAltura" type="text" size="10" placeholder="Altura(cm)" /><br>
+     <input id="valorIdade" type="text" size="10" placeholder="Idade" /><br>
+     <!--<p style="color: white; margin: 22px; position: relative;font-size: 15px;left: 325px;top: 77px;">
+     Seu gasto calorico sem execicio<br>é de:</p><br>-->
+     <div id="presul">
+      <label id="trespimc">O seu IMC é:</label>
+      <input id="resultadoIMC" type="number" />
+      <li id="imgimc"><img src="C:\Users\Jonatas Santos\Documents\AseuGosto\imagens\IMCTabela.png"></li>
+      <p class="textResultado">Seu gasto calorico diario é de: <input id="resultado" type="number" disabled="true"/></p><br><br>
+        <p class="textini">Se deseja emagrecer deve ingerir diariamente menos que: <input id="subresu" type="number" disabled="true"/></p>
+        <p class="contiTex">calorias,</p>
+        <p class="contTex2"> ou aumentar seu gasto energético através de atividades físicas. Se deseja engordar deve aumentar o consumo
+        diário de calorias.</p>
+     </div>
+     <input id="calcular" type="button" value="Calcular" onclick="soma(); mostraresul('presul'); calcIMC();" /> <!-- Input do botão para Calcular o resultado -->
+     <input id="limpar" type="reset" value="Limpar" onclick="ocultar('presul')" /> <!-- Input do botão para limpar -->
+    </form>
+  </div>
+      <div id="sobrenos">
+          <p>
+          Somos uma Startup que busca a inovação no ramo alimentar, queremos transformar o hábito alimentar 
+          dos nossos clientes, oferencendo uma refeição de qualidade e a gosto de cada cliente. Então somos para você
+          que passa na nutricionista, e tem uma dieta a seguir, estamos aqui para te ajudar, com base nos hábitos alimentares passado por sua nutricionista. Sabemos que da trabalho preparar as refeições de acordo o receituário e seguir a dienta a risca, da uma preguiça inovar sem sair da dieta né!? Por isso ‘A seu Gosto’ surgiu, para te ajudar a transformar sua alimentação, sem preguiça e com inovação. 
+          
+          E você achando que somos só para quem tem uma nutricionista? Não, não, somos para você também que deseja transformar sua alimentação, estamos aqui para te ajudar também!!!
+
+          Você pode comer de tudo, sobre precisa saber a quantidade, podemos te ajudar, veja qual a sua taxa metabólica, quantas calorias precisa ingerir.
+    </p>
+        </div>
+  </nav>
+
+</body>
+</html>

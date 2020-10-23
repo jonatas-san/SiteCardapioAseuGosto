@@ -1,0 +1,1072 @@
+* {
+margin: 0;
+padding: 0;
+}
+
+body {
+  background-image: url("C:/Users/Jonatas Santos/Documents/AseuGosto/imagens/923.jpg");
+  background-attachment: fixed;
+  
+}
+
+/*Estilizando a nav da classe menu */
+.menu {
+  width: 100%;
+  height: 50px;
+  margin: 30px 0px 0px 0px;
+  padding: 0px 0px;
+  background-color: #ef7140;
+  font-family: Arial;
+}
+/*Estilizando as listas */
+.menu ul {
+list-style: none;
+position: relative;
+}
+
+.menu ul li {
+width: 202px;
+float: left;
+}
+
+.menu a {
+  padding: 11px 0px 12px 0px;
+  display: block;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  background-color: #ef7140;
+  color: #fff;
+  left: 445px;
+}
+
+ul.subcf a {
+  padding: 11px 0px 12px 0px;
+  display: block;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  background-color: #ef7140;
+  color: #fff;
+  left: 265px;
+  top: 2px;
+  height: 30px;
+  width: 772px;
+  z-index: 1000;
+}
+
+ul.subcd a {
+  padding: 11px 0px 12px 0px;
+  display: block;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  background-color: #ef7140;
+  color: #fff;
+  left: 265px;
+  top: 8px;
+  height: 30px;
+  width: 772px;
+  z-index: 1000;
+}
+
+ul.subsna a {
+  padding: 11px 0px 12px 0px;
+  display: block;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  background-color: #ef7140;
+  color: #fff;
+  left: 265px;
+  top: 26px;
+  height: 30px;
+  width: 772px;
+  z-index: 1000;
+}
+
+.menu ul ul {
+position: absolute;
+visibility: hidden;
+/*visibility: inherit;*/
+}
+
+.menu ul li:hover ul {
+visibility: visible;
+z-index: 1000;
+}
+
+.menu a:hover {
+background-color: #f9aa8b;
+color: #555;
+}
+
+.menu ul ul li {
+float: none;
+}
+
+.menu ul ul li a {
+background-color: #ef7140;
+width: 285px;
+}
+
+.cardapio {
+  color: white;
+  position: relative;
+  top: 160px;
+  font-family: Arial;
+  font-size: 18px;
+}
+
+/* Estilizando menu de cardapios */
+.cardapio-1 ul {
+list-style: none;
+position: relative;
+}
+
+.cardapio-1 ul li {
+width: 353px;
+float: left;
+}
+
+.cardapio-1 a {
+padding: 15px 0px 12px 0px;
+display: block;
+text-decoration: none;
+background-color: #ef7140;
+color: #fff;
+}
+
+.cardapio-1 ul ul {
+position: absolute;
+top: 48px;
+visibility: hidden;
+/*visibility: inherit;*/
+}
+
+.cardapio-1 ul li:hover ul {
+visibility: visible;
+z-index: 1000;
+}
+
+.cardapio-1 a:hover {
+background-color: #f9aa8b;
+color: #555;
+}
+
+.cardapio-1 ul ul li {
+float: none;
+border-bottom: solid 1px #ccc;
+}
+
+.cardapio-1 ul ul a {
+background-color: #ef7140;
+}
+
+li.modal-1 {
+position: relative;
+top: 5px;
+left: 196px;
+}
+
+/* Cardapio Botões com Lista */
+
+.hidden {
+  display: none;
+}
+
+input {
+  display: block; 
+}
+
+input.modCar1 {
+    position: relative;
+    background-color: red;
+    outline: none;
+    width: 800px;
+    height: 170px;
+    border-radius: 15px;
+    border: none;
+    font-size: 30px;
+    left: 262px;
+}
+
+input.modCar2 {
+    position: relative;
+    background-color: red;
+    outline: none;
+    left: 0px;
+    top: 22px;
+    width: 800px;
+    height: 170px;
+    border-radius: 15px;
+    border: none;
+    font-size: 30px;
+    left: -135px;
+}
+
+input.modCar3 {
+    position: relative;
+    background-color: red;
+    outline: none;
+    top: 44px;
+    width: 800px;
+    height: 170px;
+    border-radius: 15px;
+    border: none;
+    font-size: 30px;
+    left: 266px;
+}
+
+input.modCar4 {
+    position: relative;
+    background-color: red;
+    outline: none;
+    top: 85px;
+    width: 800px;
+    height: 170px;
+    border-radius: 15px;
+    border: none;
+    font-size: 30px;
+    left: 266px;
+}
+
+input.modCar5 {
+    position: relative;
+    background-color: red;
+    outline: none;
+    top: 89px;
+    left: 0px;
+    width: 800px;
+    height: 170px;
+    border-radius: 15px;
+    border: none;
+    font-size: 30px;
+    left: -135px;
+}
+
+.subcf li::hover {
+    position: absolute;
+    top: 156px;
+    left: -12px;
+}
+
+ul.subcf {
+  position: relative;
+  padding: 0px 0px 0px 87px;
+  left: -88px;
+  width: 339px;
+}
+
+ul.subcd {
+  position: relative;
+  top: 26px;
+  left: 11px;
+  margin: -4px 0px;
+  /* padding: 0px 0px; */
+  width: 343px;
+}
+
+ul.subsna {
+  position: relative;
+  top: -10px;
+  left: 24px;
+  margin: 0px 0px;
+  padding: 3px 0px;
+  width: 341px;
+}
+
+ul.subsde {
+  position: relative;
+  top: 111px;
+  left: 14px;
+  margin: -1px 0px;
+  padding: 0px 0px;
+  width: 342px
+}
+
+ul.subcv {
+    top: 9px;
+    left: 14px;
+    width: 341px;
+}
+
+ul.subcf li {
+    float: none;
+    width: 773px;
+    padding: 1px 14px;
+    margin: 2px 2px;
+}
+
+ul.subcv li {
+    float: none;
+    width: 765px;
+    padding: 1px 0px;
+    margin: 1px 0px;
+    position: relative;
+    top: 7px;
+}
+
+ul.subcd li {
+    float: none;
+    width: 772px;
+    padding: 0px 0px;
+    margin:3px 0px;
+    position: relative;
+    top: 16px;
+}
+
+ul.subsna li {
+    position: relative;
+    float: none;
+    width: 764px;
+    margin: 3px -10px;
+    top: 67px;
+}
+
+ul.subsde li {
+    position: relative;
+    float: none;
+    width: 768px;
+    margin: 4px -1px;
+    top: -31px;
+}
+
+.listaop {
+    position: relative;
+    top: 200px;
+}
+/* ****************************************** */
+
+
+/**** Botão WhatsApp ****/
+.whatsapp-link {
+  position: fixed;
+  top: 459px;
+  width: 60px;
+  height: 60px;
+  bottom: 40px;
+  right: 40px;
+  background-color: #25d366;
+  color: #fff;
+  border-radius: 50px;
+  text-align: center;
+  font-size: 30px;
+  box-shadow: 1px 1px 2px #888;
+  z-index: 1000;
+}
+
+.fa-whatsapp {
+  margin: 16px;
+}
+
+.instagram-link {
+  position: fixed;
+  top: 530px;
+  width: 60px;
+  height: 60px;
+  bottom: 40px;
+  right: 40px;
+  background-color: #d3254d;
+  color: #fff;
+  border-radius: 50px;
+  text-align: center;
+  font-size: 30px;
+  box-shadow: 1px 1px 2px #888;
+  z-index: 1000;
+}
+
+.fa-instagram {
+  margin: 16px;
+}
+
+/* CSS para o calculo de calorias */
+.cabecario {
+  position: absolute;
+  font-family: Arial;
+  font-size: 23px;
+  left: 1103px;
+  top: 27px;
+  color: #d2cfcf;
+}
+
+.SexoDiv select {
+    outline: none;
+    background-color: #ffb173;
+}
+
+select {
+  cursor:pointer;
+}
+
+img {
+    position: absolute;
+    width: 43px;
+    top: 7px;
+    left: 93px;
+}
+h1.cabecario-2 {
+    position: absolute;
+    left: 132px;
+    top: -1px;
+}
+
+.caixapedido {
+    position: relative;
+    left: -334px;
+    top: 345px;
+    cursor: pointer;
+}
+textarea.msg {
+    position: absolute;
+    left: -139px;
+    width: 400px;
+    height: 200px;
+    border: solid;
+    border-radius: 8px;
+    border-color: black;
+}
+
+button {
+    position: absolute;
+    top: 224px;
+    left: -23px;
+    width: 193px;
+    height: 30px;
+    border-radius: 6px;
+    border: none;
+    background-color: #ffb649;
+}
+
+#valorPeso {
+    position: absolute;
+    left: 350px;
+    width: 240px;
+    height: 26px;
+    outline: none;
+    border-radius: 5px;
+    border: solid 1px;
+    border-color: #de71a8;
+}
+#valorAltura {
+    position: absolute;
+    left: 350px;
+    width: 240px;
+    height: 26px;
+    outline: none;
+    top: 35px;
+    border-radius: 5px;
+    border: solid 1px;
+    border-color: #de71a8;
+}
+#valorIdade {
+    position: absolute;
+    left: 350px;
+    width: 240px;
+    height: 26px;
+    top: 69px;
+    outline: none;
+    border-radius: 5px;
+    border: solid 1px;
+    border-color: #de71a8;
+}
+
+/*#resultado {
+    position: relative;
+    left: 216px;
+    background: none;
+    top: 28px;
+    text-align: center;
+    font-family: Arial;
+    font-size: 38px;
+    border-radius: 5px;
+    border: solid 1px;
+    border: none;
+    color: #fff;
+}*/
+
+.textResultado {
+    font-size: 15px;
+    width: 264px;
+}
+
+p.contiTex {
+  position: relative;
+  left: 134px;
+  top: -28px;
+  font-size: 16px;
+}
+
+p.contTex2 {
+  position: relative;
+  top: -18px;
+  width: 233px;
+}
+
+#subresu {
+    width: 80px;
+    position: relative;
+    top: 10px;
+    left: 79px;
+    font-size: 16px;
+    height: 16px;
+    background: none;
+    border: none;
+    color: white;
+}
+
+#presul {
+    display: none;
+    position: relative;
+    left: 334px;
+    top: 115px;
+    width: 129px;
+    color: white;
+    background: #09c770b3;
+    padding: 210px 187px 0px 42px;
+    border-radius: 2px;
+    z-index: 1000;
+}
+
+#resultado {
+  position: relative;
+  left: 72px;
+  background: none;
+  top: 15px;
+  height: 48px;
+  width: 144px;
+  font-family: Arial;
+  font-size: 40px;
+  border-radius: 5px;
+  border: solid 1px;
+  border: none;
+  color: #fff;
+}
+
+#calcular {
+    position: absolute;
+    left: 361px;
+    top: 106px;
+    width: 100px;
+    height: 27px;
+    outline: none;
+    border: solid 1px;
+    border-radius: 4px;
+    background-color: #ffb173;
+    border-color: #ff9435;
+    cursor: pointer;
+}
+
+.subtitulo {
+    position: relative;
+    margin: 0px 25px;
+    left: -17px;
+    top: 250px;
+    font-family: Arial;
+    color: #fff;
+}
+
+#limpar {
+    position: absolute;
+    outline: none;
+    left: 483px;
+    top: 106px;
+    width: 100px;
+    height: 27px;
+    border: solid 1px;
+    border-radius: 4px;
+    background-color: #ffb173;
+    border-color: #ff9435;
+    cursor: pointer;
+}
+
+.SexoC {
+    position: absolute;
+    text-align: center;
+    left: 399px;
+    width: 142px;
+    top: -77px;
+    height: 26px;
+    border: solid 1px;
+    border-radius: 6px;
+    border-color: #ff9435;
+}
+
+#AtiFisica {
+    position: absolute;
+    top: -89px;
+    left: 417px;
+    width: 105px;
+    height: 25px;
+    border: solid 1px;
+    border-radius: 6px;
+    border-color: #ff9435;
+    background-color: #ffb173;
+    outline: none;
+}
+p {
+    font-family: monospace;
+}
+
+#sobrenos {
+  position: relative;
+  color: white;
+  top: 150px;
+  /*text-align: justify;*/
+  width: 807px;
+  background-color: #f16c03;
+  left: 340px;
+  padding: 37px 2px 20px 7px;
+}
+
+#caixamsg {
+    position: relative;
+    top: 98px;
+    padding: 7px 362px;
+}
+
+.textmsg {
+    font-size: 15px;
+    color: white;
+}
+
+.textini {
+    width: 241px;
+    position: relative;
+    top: -20px;
+}
+
+#caixatext {
+    position: relative;
+    width: 341px;
+    border: none;
+    left: 120px;
+    outline: none;
+}
+
+label {
+  color: white;
+}
+
+#nomecliente {
+  position: relative;
+  width: 337px;
+  height: 30px;
+  font-size: 15px;
+  left: 120px;
+  border: none;
+  border-radius: 6px;
+  outline: none;
+}
+
+#emailcliente {
+  position: relative;
+  width: 337px;
+  height: 30px;
+  font-size: 15px;
+  left: 120px;
+  border: none;
+  border-radius: 6px;
+  outline: none;
+}
+
+#contatocliente {
+  position: relative;
+  width: 337px;
+  height: 30px;
+  font-size: 15px;
+  left: 120px;
+  border: none;
+  border-radius: 6px;
+  outline: none;
+}
+
+#botaoOpcao {
+  position: relative;
+  width: 164px;
+  height: 31px;
+  left: 265px;
+  top: 20px;
+  border-radius: 6px;
+  background: red;
+  border-color: orange;
+  outline: none;
+}
+
+fieldset {
+    background: #438a45;
+    padding: 15px 5px 15px 5px;
+    border: 1px solid #1a541c;
+}
+
+#formulariocli {
+  position: relative;
+  left: -6px;
+}
+
+#resultadoIMC {
+  position: relative;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 25px;
+  top: -125px;
+  left: -6px;
+}
+
+label#trespimc {
+    position: relative;
+    top: -153px;
+    font-size: 18px;
+    left: 31px;
+}
+
+#imgimc img {
+    position: relative;
+    width: 343px;
+    top: -112px;
+    left: -36px;
+}
+
+
+
+
+/*Criando o label */
+label[for=”bt_menu”]{
+padding: 5px;
+background-color: #222;
+color: #fff;
+font-family: Arial;
+text-align: center;
+font-size: 30px;
+cursor: pointer;
+height: 50px;
+}
+
+#bt_menu {
+display: none;
+}
+
+label[for=”bt_menu”]{
+display: none;
+}
+
+
+
+/*Deixando o Menu Responsivo */
+@media(max-width: 640px) {
+label[for=”bt_menu”] {
+display: block;
+}
+
+#bt_menu:checked ~ .menu{
+margin-left: 0;
+}
+
+.menu{
+margin-top: 5px;
+margin-left: 0%;
+transition: all .4s;
+}
+
+.menu a {
+    position: relative;
+    left: 0px;
+    padding: 15px 30px 20px 60px;
+    display: block;
+    width: 272px;
+    text-align: center;
+    text-decoration: none;
+    background-color: #ef7140;
+    color: #fff;
+}
+
+.menu ul li {
+width: 100%;
+float: none;
+}
+
+.menu ul ul {
+position: static;
+overflow: hidden;
+max-height: 0;
+transition: all 4s;
+}
+
+.menu ul li:hover ul {
+height: auto;
+max-height: 200px;
+}
+
+ul.subcf a {
+  padding: 11px 0px 12px 0px;
+  display: block;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  background-color: #ef7140;
+  color: #fff;
+  left: 0px;
+  width: 332px;
+  height: 65px;
+  z-index: 1000;
+}
+ul.subcd a {
+  padding: 11px 0px 12px 0px;
+  display: block;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  background-color: #ef7140;
+  color: #fff;
+  left: 0px;
+  top: -2px;
+  width: 332px;
+  height: 46px;
+  z-index: 1000;
+}
+
+ul.subsna a {
+  padding: 12px 0px 13px 0px;
+  display: block;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  background-color: #ef7140;
+  color: #fff;
+  left: 0px;
+  top: 14px;
+  width: 332px;
+  height: 32px;
+  z-index: 1000;
+}
+
+#sobrenos {
+    position: relative;
+    color: white;
+    top: 180px;
+    /* text-align: justify; */
+    width: 339px;
+    background-color: #f16c03;
+    left: 333px;
+    padding: 37px 12px 20px 12px;
+    z-index: 1000;
+}
+
+input.modCar1 {
+  position: relative;
+  background-color: red;
+  width: 357px;
+  height: 160px;
+  left: 4px;
+  border-radius: 15px;
+  border: none;
+  font-size: 30px;
+}
+
+input.modCar2 {
+    position: relative;
+    background-color: red;
+    left: 0px;
+    top: 15px;
+    width: 375px;
+    height: 160px;
+    border-radius: 15px;
+    border: none;
+    font-size: 30px;
+}
+
+input.modCar3 {
+    position: relative;
+    background-color: red;
+    top: 35px;
+    width: 357px;
+    height: 160px;
+    border-radius: 15px;
+    border: none;
+    font-size: 30px;
+    left: 2px;
+}
+
+input.modCar4 {
+    position: relative;
+    background-color: red;
+    top: 72px !important;
+    left: 0px;
+    width: 357px;
+    height: 160px;
+    border-radius: 15px;
+    border: none;
+    font-size: 30px;
+    left: 2px;
+}
+
+input.modCar5 {
+    position: relative;
+    background-color: red;
+    top: 78px !important;
+    left: 0px;
+    width: 375px;
+    height: 160px;
+    border-radius: 15px;
+    border: none;
+    font-size: 30px;
+}
+
+ul.subsd li {
+    position: relative;
+    float: none;
+    width: 362px;
+    margin: 3px -11px;
+    top: 0px;
+}
+
+ul.subsn li {
+    position: relative;
+    float: none;
+    width: 340px;
+    margin: 3px -16px;
+    top: 90px;
+}
+.textResultado {
+    font-size: 15px;
+    width: 265px;
+    position: relative;
+    top: -75px;
+}
+
+#presul {
+    display: none;
+    position: relative;
+    left: 334px;
+    top: 115px;
+    width: 129px;
+    color: white;
+    background: #09c770b3;
+    padding: 210px 187px 0px 42px;
+    z-index: 1000;
+}
+
+.textini {
+    width: 241px;
+    position: relative;
+    top: -64px;
+}
+
+p.contTex2 {
+    position: relative;
+    top: -70px;
+    width: 275px;
+}
+
+p.contiTex {
+    position: relative;
+    left: 106px;
+    top: -72px;
+    padding: 0px 0px 0px 14px;
+}
+
+#caixamsg {
+    position: relative;
+    top: 98px;
+    padding: 7px 10px;
+}
+
+.textmsg {
+    font-size: 15px;
+    color: white;
+}
+
+#caixatext {
+    position: relative;
+    width: 341px;
+    border: none;
+    left: 0px;
+    outline: none;
+}
+
+label {
+  color: white;
+}
+
+#nomecliente {
+  position: relative;
+  width: 337px;
+  height: 30px;
+  font-size: 15px;
+  border: none;
+  left: 0px;
+  border-radius: 6px;
+  outline: none;
+}
+
+#emailcliente {
+  position: relative;
+  width: 337px;
+  height: 30px;
+  font-size: 15px;
+  border: none;
+  left: 0px;
+  border-radius: 6px;
+  outline: none;
+}
+
+#contatocliente {
+  position: relative;
+  width: 337px;
+  height: 30px;
+  font-size: 15px;
+  border: none;
+  left: 0px;
+  border-radius: 6px;
+  outline: none;
+}
+
+#botaoOpcao {
+  position: relative;
+  width: 164px;
+  height: 31px;
+  left: 82px;
+  top: 20px;
+  border-radius: 6px;
+  background: red;
+  border-color: orange;
+  outline: none;
+}
+
+fieldset {
+  padding: 15px 5px 15px 5px;
+  border: 1px solid #fff;
+}
+
+#formulariocli {
+  position: relative;
+  left: -6px;
+}
+
+#resultadoIMC {
+    position: relative;
+    background: none;
+    border: none;
+    text-align: center;
+    color: white;
+    font-size: 25px;
+    top: -125px;
+    left: -23px;
+}
+
+label#trespimc {
+    position: relative;
+    top: -153px;
+    font-size: 18px;
+    left: 82px;
+}
+
+#imgimc img {
+    position: relative;
+    width: 343px;
+    top: -112px;
+    left: -36px;
+}
+
+}
